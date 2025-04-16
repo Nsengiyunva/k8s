@@ -17,14 +17,3 @@ spec:
           image: nsengiyunva2021/api-gateway
           ports:
             - containerPort: 8082
----
-apiVersion: v1
-kind: Service
-spec:
-  selector:
-    app: gateway
-  ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 8082
-  type: LoadBalancer

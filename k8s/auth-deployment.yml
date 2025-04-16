@@ -17,18 +17,6 @@ spec:
           image: nsengiyunva2021/auth-service
           ports:
             - containerPort: 3001
----
-apiVersion: v1
-kind: Service
-metadata: 
-  name: auth-service
-spec:
-  selector:
-    app: auth
-  port:
-    - protocol: TCP
-      port: 80
-      targetPort: 3001
 
     
     
