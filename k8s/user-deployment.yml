@@ -18,14 +18,14 @@ spec:
           ports:
             - containerPort: 3002
 ---
-apiVersion: Service
+apiVersion: v1
 kind: Service
-metadata:
+metadata: 
   name: user-service
 spec:
   selector:
     app: user
-  ports:
+  port:
     - protocol: TCP
       port: 80
       targetPort: 3002
